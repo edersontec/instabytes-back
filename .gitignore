@@ -3,3 +3,4 @@ chave-api.md
 .env
 uploads/*
 !uploads/.gitkeep
+docs.md

@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import fs from "fs";
 import { getTodosPosts, criarPost, atualizarPost } from "../models/postsModel.js";
 import gerarDescricaoComGemini from "../services/geminiService.js";
@@ -30,8 +31,10 @@ export async function postarNovoPost(req, res) {
 
 export async function atualizarNovoPost(req, res) {
     
+    const port = process.env.PORT || 3000;
+
     const id = req.params.id;
-    const urlImagem = `http://localhost:3000/${id}.png`;
+    const urlImagem = `http://localhost:${port}/${id}.png`;
     
 
     try {
