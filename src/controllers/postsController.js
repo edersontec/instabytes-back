@@ -15,6 +15,13 @@ export async function listarPosts(req, res) {
 
 export async function postarNovoPost(req, res) {
     
+    // {
+    //     "_id": "6744fad09b95defda8b02caf",
+    //     "descricao": "um cafe",
+    //     "imgUrl": "http://localhost:3000/6744fad09b95defda8b02caf.png",
+    //     "alt": "um copo de cafe"
+    // },
+
     const novoPost = req.body;
 
     try {
