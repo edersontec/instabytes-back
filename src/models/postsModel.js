@@ -45,3 +45,16 @@ export async function atualizarPost(id, novoPost){
     const objID = ObjectId.createFromHexString(id);
     return colecao.updateOne({_id: new ObjectId(objID)}, {$set: novoPost});
 }
+
+export async function deletaPost(id){
+    
+    // busca pelo database
+    const db = conexao.db(database);
+
+    // busca pela collection
+    const colecao = db.collection(collection);
+
+    // deletar um post
+    const objID = ObjectId.createFromHexString(id);
+    return colecao.deleteOne({_id: new ObjectId(objID)});
+}
