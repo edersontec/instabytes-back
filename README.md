@@ -47,13 +47,14 @@ Este projeto é resultado da Imersão DEV Backend [Alura](https://www.alura.com.
 
 ## Pré-requisitos
 
+- [git](https://git-scm.com/)
 - [Node.js e npm](https://nodejs.org/pt)
 - [conta MongoDB Altas](https://www.mongodb.com/products/platform/atlas-database)
 - [api-key Google Gemini](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br)
 
 ## Como instalar este projeto
 
-- Clone o repositório: git clone https://github.com/edersontec/instabytes.git
+- Clone o repositório: git clone https://github.com/edersontec/instabytes-back.git
 - Baixe as dependências: npm install
 - Prepare as variáveis de ambiente:
   - O arquivo *env.example* é um arquivo de exemplo para auxiliar na instalação da aplicação, basta preencher as informações
