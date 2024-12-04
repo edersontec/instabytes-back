@@ -16,11 +16,10 @@ export async function listarPosts(req, res) {
 export async function postarNovoPost(req, res) {
     
     // {
-    //     "_id": "6744fad09b95defda8b02caf",
-    //     "descricao": "um cafe",
-    //     "imgUrl": "http://localhost:3000/6744fad09b95defda8b02caf.png",
-    //     "alt": "um copo de cafe"
-    // },
+    //     "descricao": "Descrição da imagem",
+    //     "imgUrl" : "",
+    //     "alt": "alt opcional"
+    // }
 
     const novoPost = req.body;
 
@@ -36,7 +35,7 @@ export async function postarNovoPost(req, res) {
 
 }
 
-export async function atualizarNovoPost(req, res) {
+export async function adicionarDadosImagemNoPost(req, res) {
     
     const port = process.env.PORT || 3000;
 
@@ -67,22 +66,15 @@ export async function atualizarNovoPost(req, res) {
 
 export async function uploadImagem(req, res) {
     
+    const id = req.params.id;
     console.log('req.file.originalName: ' + req.file.originalName);
-
-    const novoPost = {
-        descricao: "",
-        imgUrl: req.file.originalName,
-        alt: ""
-    };
 
     try {
         
-        const postCriado = await criarPost(novoPost);
-        const imgAtualizada = `uploads/${postCriado.insertedId}.png`;
-    
+        const imgAtualizada = `uploads/${id}.png`;
         fs.renameSync(req.file.path, imgAtualizada);
 
-        res.status(200).json(postCriado);
+        res.status(200).json(imgAtualizada);
 
     } catch (erro) {
         console.log(erro.message);
