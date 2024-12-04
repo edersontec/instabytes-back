@@ -7,11 +7,11 @@
 - [Aprendizados](#aprendizados)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 	- [Bibliotecas](#bibliotecas)
-- [Pré-requisitos](#pre-requisitos)
+- [Pré-requisitos](#pré-requisitos)
 - [Como instalar este projeto](#como-instalar-este-projeto)
 - [Como usar este projeto](#como-usar-este-projeto)
-- [Informações adicionais](#informacoes-adicionais)
-- [Licença](#licenca)
+- [Informações adicionais](#informações-adicionais)
+- [Licença](#licença)
 - [Contribuidores](#contribuidores)
 
 ## Sobre o projeto
@@ -41,7 +41,7 @@ Este projeto é resultado da Imersão DEV Backend [Alura](https://www.alura.com.
 ### Bibliotecas
 
 - [@google/generative-ai](https://www.npmjs.com/package/@google/generative-ai): Biblioteca para utilização da API Gemini do Google
-- [Multer](https://www.npmjs.com/package/multer): Biblioteca para manipulação multipart/form-data, usado principalmente para fazer upload de arquivos
+- [multer](https://www.npmjs.com/package/multer): Biblioteca para manipulação multipart/form-data, usado principalmente para fazer upload de arquivos
 - [dotenv](https://www.npmjs.com/package/dotenv): Biblioteca para gerenciar variáveis de ambiente (arquivo .env)
 - [cors](https://www.npmjs.com/package/cors): Biblioteca para gerenciar CORS - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes). É um mecanismo de segurança que usa cabeçalhos adicionais HTTP para informar ao navegador que um aplicativo Web tem permissão para acessar recursos de um servidor de uma origem diferente.
 
@@ -68,9 +68,9 @@ Este projeto é resultado da Imersão DEV Backend [Alura](https://www.alura.com.
 
 Para realizar requisições, use uma plataforma para testes de API como o [Postman](https://www.postman.com/).
 
-- listar posts: get("/posts") // lista todos os posts
+- listar posts: get("/posts") *// lista todos os posts*
 
-- criar post: post("/posts") // cria um novo post (sem imagem)
+- criar post: post("/posts") *// cria um novo post (sem imagem)*
   - body
   ```json
   {
@@ -80,15 +80,15 @@ Para realizar requisições, use uma plataforma para testes de API como o [Postm
   }
   ```
 
-- fazer upload de imagem para um post: post("/upload/:id") // faz upload da imagem para o servidor, o nome da imagem será o id do post correspondente
+- fazer upload de imagem para um post: post("/upload/:id") *// faz upload da imagem para o servidor, o nome da imagem será o id do post correspondente*
   -  form-data
   ```
   Key: imagem; Value: imagem.jpg
   ```
 
-- atualizar post com dados da imagem: put("/posts/:id") // insere no banco de dados o endereço estático da imagem e a descrição da imagem gerada por IA 
+- atualizar post com dados da imagem: put("/posts/:id") *// insere no banco de dados o endereço estático da imagem e a descrição da imagem gerada por IA*
 
-- deletar post: delete("/posts/:id") // delete post no banco de dados e imagem no servidor
+- deletar post: delete("/posts/:id") *// delete post no banco de dados e imagem no servidor*
 
 ## Informações adicionais
 
@@ -96,7 +96,7 @@ Para realizar requisições, use uma plataforma para testes de API como o [Postm
 
 ## Licença
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE) para mais detalhes.
 
 ## Contribuidores
 
